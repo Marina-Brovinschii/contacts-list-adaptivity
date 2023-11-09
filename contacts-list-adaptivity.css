@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    background-color: rgb(92, 23, 23);
+    font-family: sans-serif;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.app {
+    width: 100%;
+    height: 93%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+}
+.app .app-header {
+    height: 13%;
+}
+.app .app-header label {
+    width: 150%;
+}
+.app .app-header input {
+    border: none;
+    font-size: 0.7em;
+    padding: 1em;
+    width: 35em;
+    padding-left: 3em;
+    background-image: url(images/search-24-icon.png);
+    background-size: 2em;
+    background-position: left;
+    background-repeat: no-repeat;
+    border-radius: 10em;
+    margin-left: 1em;
+    background-color: rgb(206, 204, 204);
+}
+.app-header .header-content {
+    display: flex;
+    flex-direction: row;
+}
+.app-header .header-content img:nth-child(1) {
+    padding: 1em;
+}
+.app-header .header-content img:nth-child(3) {
+    padding: 1em;
+    margin-left: 15em;
+}
+.app-header .header-content span {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 1.5em;
+}
+.app .app-footer {
+    height: 7%;
+    display: flex;
+    flex-direction: row;
+}
+.app .app-footer span {
+    display: block;
+    padding: 0 2.5em;
+    margin-top: 1em;
+}
+.app .app-contacts {
+    height: 80%;
+    overflow: auto;
+}
+.app-contacts ul {
+    display: flex;
+    flex-direction: column;
+}
+.app-contacts .app-contacts__profile {
+    margin: 0;
+    width: 150%;
+    display: flex;
+    flex-direction: row;
+    margin: 1vmin 0;
+}
+.app-contacts__profile .contacts-avatar {
+    background-color: grey;
+    width: 7vmax;
+    height: 7vmax;
+    border-radius: 100%;
+    margin: 0 2vmin;
+    scroll-snap-align: end;
+}
+.contacts-avatar span.off {
+    width: 4vmin;
+    height: 4vmin;
+    border-radius: 100%;
+    background-color: rgb(80, 79, 79);
+    display: block;
+    border: 3px solid white;
+    float: right;
+}
+.contacts-avatar span.on {
+    width: 4vmin;
+    height: 4vmin;
+    border-radius: 100%;
+    background-color: green;
+    display: block;
+    border: 3px solid white;
+    float: right;
+}
+h3, p {
+    margin: 1vmin;
+}
+.app-contacts__profile .contacts-avatar img {
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+}
+.app-contacts__profile .contacts-details {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vmax;
+    position: relative;
+    scroll-snap-align: start;
+}
+.contacts-details span {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+}
+.app-contacts .app-contacts__slide {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.app-contacts__profile .contacts-actions {
+    padding-top: 1em;
+    scroll-snap-align: start;
+}
+.contacts-actions a {
+    display: inline-block;
+    margin: 0 1em;
+}
+
+@media (orientation:landscape) {
+    .app .app-header input {
+        width: 140em;
+        font-size: 0.4em;
+    }
+    .app-header .header-content img:nth-child(1) {
+        padding: 1vmin;
+        margin-left: 1vmin;
+    }
+    .app-header .header-content img:nth-child(3) {
+        padding: 1vmin;
+        margin-left: 41vmax;
+    }
+    .app-header .header-content span {
+        font-size: 1em;
+        margin-left: 45vmax;
+    }
+    .app .app-contacts {
+        margin-top: 1em;
+    }
+    .app .app-footer span {
+        margin: 1vmin;
+        padding:0 10.5vmax;
+    }
+    .app .app-contacts {
+        height: 75%;
+    }
+    .app-contacts__profile .contacts-details {
+        width: 59%;
+    }
+    .app-contacts__profile .contacts-actions {
+        display: block;
+        margin-left: 10%;
+    }
+    .contacts-details span {
+        right: 0;
+    }
+}
+
+@media (orientation:landscape) and (min-width:1000px) {
+    body {
+        font-size: 20px;
+    }
+    .app .app-header input {
+        width: 157em;
+    }
+    .app-header .header-content img:nth-child(1) {
+        padding: 1vmin;
+        margin-left: 2vmin;
+    }
+    .app-header .header-content span {
+        font-size: 1.3em;
+    }
+    .app .app-contacts {
+        margin-top: 0;
+    }
+    .app .app-footer span {
+        margin: 0;
+        padding: 1vmax 10.5vmax;
+    }
+    .app .app-contacts {
+        height: 81%;
+    }
+    .app-contacts__profile .contacts-details {
+        width: 56%;
+    }
+}
